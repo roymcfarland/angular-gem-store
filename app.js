@@ -5,7 +5,19 @@
 		price: 2.95,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quibusdam atque iure maiores, hic magni obcaecati quos minima doloremque blanditiis mollitia molestias nihil, nam ratione debitis. Porro explicabo eum soluta.',
 		canPurchase: true,
-		soldOut: false
+		soldOut: false,
+		reviews: [
+			{
+				stars: 5,
+				body: 'I love this product.',
+				author: 'linda@lover.com'
+			},
+			{
+				stars: 1,
+				body: 'I hate this product.',
+				author: 'rick@hater.com'
+			}
+		]
 	},
 	{
 		name: 'Pentagonal Gem',
@@ -40,5 +52,17 @@
 			return this.tab === checkTab;
 		};
 	});
+
+	app.controller('ReviewController', function(){
+		this.review = {};
+		this.addReview = function(product) {
+			product.reviews.push(this.review);
+			this.review = {};
+		};
+	});
+
+
+
+
 
 })();
