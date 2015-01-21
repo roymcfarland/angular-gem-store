@@ -13,7 +13,7 @@
 		<div class="list-group-item" ng-hide="product.soldOut"  ng-repeat="product in store.products">
 			<h1> {{product.name}} </h1>
 			<h2> {{product.price | currency}} </h2>
-			<button ng-show="product.canPurchase"> Add to Cart </button>
+			<button class="btn btn-success" ng-show="product.canPurchase"> Add to Cart </button>
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
 					<li ng-class="{ active: panel.isSelected(1) }">

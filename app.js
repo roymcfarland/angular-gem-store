@@ -13,6 +13,13 @@
 		description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate fugit vero libero odit aliquam impedit omnis consectetur fugiat voluptas ab maxime ducimus hic aliquid ut non optio pariatur, temporibus rerum.',
 		canPurchase: true,
 		soldOut: false
+	},
+	{
+		name: 'Diamond',
+		price: 1000000,
+		description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores sit eveniet excepturi quisquam in dolores ducimus hic dolore at cupiditate pariatur, atque consectetur et, quis itaque eius necessitatibus! Itaque, ab.',
+		canPurchase: true,
+		soldOut: false
 	}
 	];
 
