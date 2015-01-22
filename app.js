@@ -10,12 +10,12 @@
 			{
 				stars: 5,
 				body: 'I love this product.',
-				author: 'linda@lover.com'
+				author: 'linda@lover.com',
 			},
 			{
 				stars: 1,
 				body: 'I hate this product.',
-				author: 'rick@hater.com'
+				author: 'rick@hater.com',
 			}
 		]
 	},
@@ -56,6 +56,7 @@
 	app.controller('ReviewController', function(){
 		this.review = {};
 		this.addReview = function(product) {
+			// this.review.createdOn = Date.now();
 			product.reviews.push(this.review);
 			this.review = {};
 		};
