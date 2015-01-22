@@ -5,14 +5,16 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 <body ng-controller='StoreController as store'>
-	
+	<header>
+		<h1 class="text-center">Olde Rocky Mountain Gem Shoppe</h1>
+		<h2 class="text-center">- An Angular.js Store -</h2>
+	</header>
 	<!-- Products Container -->
 	<div class="list-group">
 		
 		<!-- Product Container -->
 		<div class="list-group-item" ng-hide="product.soldOut"  ng-repeat="product in store.products">
-			<h1> {{product.name}} </h1>
-			<h2> {{product.price | currency}} </h2>
+			<h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 			<button class="btn btn-success" ng-show="product.canPurchase"> Add to Cart </button>
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
@@ -38,13 +40,18 @@
 					<h4>Reviews</h4>
 					<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
 						<blockquote ng-repeat="review in product.reviews">
+							<b>{{review.stars}} Stars</b>
+							<p>{{review.body}}</p>
+							<cite class="clearfix">by: {{review.author}}</cite>
+						</blockquote>
+
+						<!-- Live Preview -->
+						<h4>Submit a Review</h4>
+						<blockquote>
 							<b>{{reviewCtrl.review.stars}} Stars</b>
 							<p>{{reviewCtrl.review.body}}</p>
 							<cite class="clearfix">by: {{reviewCtrl.review.author}}</cite>
 						</blockquote>
-
-						<!-- Review Form -->
-						<h4>Submit a Review</h4>
 						<fieldset class="form-group">
 							<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="reviewCtrl.review.stars">
 								<option value="">Rate the Product</option>
