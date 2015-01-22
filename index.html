@@ -7,7 +7,7 @@
 </head>
 <body ng-controller='StoreController as store'>
 	<header>
-		<h1 class="text-center">Olde Rocky Mountain Gem Shoppe</h1>
+		<h1 class="text-center">Ye Olde Rocky Mountain Gem Shoppe</h1>
 		<h2 class="text-center">- An Angular.js Store -</h2>
 	</header>
 	<!-- Products Container -->
@@ -33,9 +33,7 @@
 					<h4>Description</h4>
 					<p>{{product.description}}</p>
 				</div>
-				<div class="panel" ng-show="panel.isSelected(2)">
-					<h4>Specifications</h4>
-					<blockquote>None yet</blockquote>
+				<div product-specs class="panel" ng-show="panel.isSelected(2)">
 				</div>
 				<div class="panel" ng-show="panel.isSelected(3)">
 					<h4>Reviews</h4>
