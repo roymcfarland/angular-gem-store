@@ -15,7 +15,7 @@
 		
 		<!-- Product Container -->
 		<div class="list-group-item" ng-hide="product.soldOut"  ng-repeat="product in store.products">
-			<h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+			<product-title></product-title>
 			<button class="btn btn-success" ng-show="product.canPurchase"> Add to Cart </button>
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
